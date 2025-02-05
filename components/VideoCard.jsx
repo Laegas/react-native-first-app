@@ -1,10 +1,15 @@
 import { useState } from "react";
-import { ResizeMode, Video } from "expo-av";
+import { useVideoPlayer, VideoView } from 'expo-video';
 import { View, Text, TouchableOpacity, Image } from "react-native";
 
 import { icons } from "../constants";
 
 const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
+  const player = useVideoPlayer(video, player => {
+    player.loop = true;
+    player.play();
+  });
+
   const [play, setPlay] = useState(false);
 
   return (
@@ -41,18 +46,7 @@ const VideoCard = ({ title, creator, avatar, thumbnail, video }) => {
       </View>
 
       {play ? (
-        <Video
-          source={{ uri: video }}
-          className="w-full h-60 rounded-xl mt-3"
-          resizeMode={ResizeMode.CONTAIN}
-          useNativeControls
-          shouldPlay
-          onPlaybackStatusUpdate={(status) => {
-            if (status.didJustFinish) {
-              setPlay(false);
-            }
-          }}
-        />
+        <VideoView className="w-full h-60 rounded-xl mt-3" player={player} allowsFullscreen allowsPictureInPicture />
       ) : (
         <TouchableOpacity
           activeOpacity={0.7}

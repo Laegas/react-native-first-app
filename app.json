@@ -12,10 +12,11 @@
       "backgroundColor": "#ffffff"
     },
     "scheme": "aora",
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true,
-      "package": "com.jsm.aora"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
@@ -27,6 +28,17 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-router", "expo-font"]
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-video",
+        {
+          "supportsBackgroundPlayback": true,
+          "supportsPictureInPicture": true
+        }
+      ]
+    ]
   }
 }

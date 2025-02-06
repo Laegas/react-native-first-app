@@ -8,7 +8,7 @@ import { useGlobalContext } from "../../context/GlobalProvider";
 
 const TabIcon = ({ icon, color, name, focused }) => {
   return (
-    <View className="flex items-center justify-center gap-2">
+    <View className="flex items-center justify-center gap-2 mt-4">
       <Image
         source={icon}
         resizeMode="contain"
@@ -16,7 +16,7 @@ const TabIcon = ({ icon, color, name, focused }) => {
         className="w-6 h-6"
       />
       <Text
-        className={`${focused ? "font-psemibold" : "font-pregular"} text-xs`}
+        className={`${focused ? "font-psemibold" : "font-pregular"} text-xs w-full h-4`}
         style={{ color: color }}
       >
         {name}
@@ -41,7 +41,7 @@ const TabLayout = () => {
             backgroundColor: "#161622",
             borderTopWidth: 1,
             borderTopColor: "#232533",
-            height: 84,
+            height: 100,
           },
         }}
       >
@@ -107,7 +107,6 @@ const TabLayout = () => {
           }}
         />
       </Tabs>
-
       <Loader isLoading={loading} />
       <StatusBar backgroundColor="#161622" style="light" />
     </>

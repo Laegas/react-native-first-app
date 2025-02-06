@@ -33,7 +33,7 @@ const TrendingItem = ({ activeItem, item }) => {
 
   const player = useVideoPlayer(item.video, player => {
     player.loop = true;
-    player.play();
+    // player.play();
   });
 
   return (

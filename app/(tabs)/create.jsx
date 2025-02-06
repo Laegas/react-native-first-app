@@ -86,9 +86,7 @@ const Create = () => {
 
   const player = useVideoPlayer(form.video?.uri, player => {
     player.loop = true;
-    // player.play(); 
   });
-
 
   return (
     <SafeAreaView className="bg-primary h-full">

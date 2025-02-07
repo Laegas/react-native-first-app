@@ -37,3 +37,6 @@ yarn-error.*
 
 # Expo native builds
 ios
+
+# Env variables
+.env

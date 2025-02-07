@@ -17,7 +17,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.jsm.aora",
+      "bundleIdentifier": "com.jsm.aorakrystof",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -27,7 +27,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.jsm.aora"
+      "package": "com.jsm.aorakrystof"
     },
     "web": {
       "favicon": "./assets/favicon.png"
